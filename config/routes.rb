@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get "/stream" => "static_pages#stream"
   get "/about" => "static_pages#about"
-  resources :articles, :only => [:show, :index]
+  resources :articles, :only => [:show, :index] do
+    resources :blog_comments, :only => [:create, :delete]
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

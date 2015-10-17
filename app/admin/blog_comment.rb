@@ -1,4 +1,4 @@
-ActiveAdmin.register StaticPage do
+ActiveAdmin.register BlogComment do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -13,5 +13,5 @@ ActiveAdmin.register StaticPage do
 #   permitted
 # end
 
-	permit_params :title, :content, :user
+	permit_params :content, :article_id, :user_id
 end

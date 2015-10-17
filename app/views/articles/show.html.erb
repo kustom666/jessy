@@ -1,2 +1,20 @@
 <h2><%= @article.title %></h2>
 <p><%= @article.content.html_safe %></p>
+
+<% if user_signed_in? %>
+	<h2>Add a comment:</h2>
+	<%= form_for([@article, @article.blog_comments.build]) do |f| %>
+	  <p>
+	    <%= f.label :content %><br>
+	    <%= f.text_area :content %>
+	  </p>
+	  <p>
+	    <%= f.submit %>
+	  </p>
+	<% end %>
+<% end %>
+
+<% @article.blog_comments.each do |comment| %>
+	<p><%= comment.content %></p>
+	<p><%= comment.user.to_s%></p>
+<% end %>

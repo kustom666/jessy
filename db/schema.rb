@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017051954) do
+ActiveRecord::Schema.define(version: 20151017161619) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20151017051954) do
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
+
+  create_table "blog_comments", force: :cascade do |t|
+    t.text     "content",    limit: 65535
+    t.integer  "article_id", limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "blog_comments", ["article_id"], name: "index_blog_comments_on_article_id", using: :btree
+  add_index "blog_comments", ["user_id"], name: "index_blog_comments_on_user_id", using: :btree
 
   create_table "static_pages", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -66,4 +77,6 @@ ActiveRecord::Schema.define(version: 20151017051954) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "articles", "users"
+  add_foreign_key "blog_comments", "articles"
+  add_foreign_key "blog_comments", "users"
 end
