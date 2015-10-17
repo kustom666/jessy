@@ -26,6 +26,7 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li class="<%= 'active' if action_name == 'stream' %>"><%= link_to "Stream", "/stream"%></li>
+        <li class="<%= 'active' if controller_name == 'articles' %>"><%= link_to "Blog", articles_path%></li>
         <li class="<%= 'active' if action_name == 'about' %>"><%= link_to "About", "/about"%></li>
       </ul>
     </section>
