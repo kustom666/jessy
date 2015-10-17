@@ -44,4 +44,4 @@ Mauris volutpat semper quam elementum eleifend. Sed ut semper erat, vitae maximu
 Morbi consectetur egestas nunc dictum suscipit. Maecenas sit amet mauris gravida felis auctor venenatis non ac quam. Fusce pulvinar enim diam. Ut vel quam eget erat ultrices vestibulum id et quam. Praesent in ultrices ex, ac ullamcorper felis. Sed ultrices lectus non nisi pellentesque cursus. Vestibulum at porttitor nunc. Quisque id mauris tortor. Sed imperdiet, lorem quis efficitur feugiat, neque mi blandit augue, eget bibendum libero dolor ac turpis. Fusce sagittis posuere arcu, a suscipit neque fermentum at. Nunc in rhoncus tortor, quis maximus nisi.
 </p>")
 
-User.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils'
+User.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils' , :admin => true
