@@ -14,7 +14,7 @@
 	<% end %>
 <% end %>
 
-<% @article.blog_comments.each do |comment| %>
+<% @article.blog_comments.reverse_each do |comment| %>
 	<p><%= comment.content %></p>
 	<p><%= comment.user.to_s%></p>
 <% end %>
