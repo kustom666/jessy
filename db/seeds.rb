@@ -29,7 +29,7 @@ Morbi consectetur egestas nunc dictum suscipit. Maecenas sit amet mauris gravida
 </p>")
 
 StaticPage.create(name: "stream", title: "Jessy's stream", content: '<iframe id="player" type="text/html" width="726" height="408"
-  src="http://www.twitch.tv/jessyquil/embed"
+  src="https://www.twitch.tv/jessyquil/embed"
   frameborder="0"></iframe>')
 
 User.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils' , :admin => true, nickname: "JessyQuil"
