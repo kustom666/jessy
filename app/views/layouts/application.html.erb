@@ -25,10 +25,11 @@
     <section class="top-bar-section">
       <ul class="left">
         <% if user_signed_in? %>
-        <li><%= link_to "Hello #{current_user.email}", "#" %></li>
+        <li><%= link_to "Hello #{current_user.nickname}", "#" %></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
         <%else%>
         <li><%= link_to "Sign in", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
         <%end%>
       </ul>
       <!-- Right Nav Section -->
@@ -39,15 +40,29 @@
       </ul>
     </section>
   </nav>
-  <div class="row">
-  	<div class="small-8 columns"><p class="notice"><%= notice %></p></div>
-	</div>
-  <div class="row">
-    <div class="small-8 columns"><p class="alert"><%= alert %></p></div>
-  </div>
+  <div class="wrapper">
+    <% if notice %>
+    <div class="row">
+    	<div class="small-8 small-centered columns">
+        <div data-alert class="alert-box success radius">
+          <%= notice %><a href="#" class="close">&times;</a>
+        </div>
+      </div>
+  	</div>
+    <% end %>
+    <% if alert %>
+    <div class="row">
+      <div class="small-8 small-centered columns">
+        <div data-alert class="alert-box alert radius">
+          <%= alert %><a href="#" class="close">&times;</a>
+        </div>
+      </div>
+    </div>
+    <% end %>
 
-  <div class="row">
-    <%= yield %>
+    <div class="row">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>

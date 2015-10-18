@@ -28,23 +28,11 @@ Mauris volutpat semper quam elementum eleifend. Sed ut semper erat, vitae maximu
 Morbi consectetur egestas nunc dictum suscipit. Maecenas sit amet mauris gravida felis auctor venenatis non ac quam. Fusce pulvinar enim diam. Ut vel quam eget erat ultrices vestibulum id et quam. Praesent in ultrices ex, ac ullamcorper felis. Sed ultrices lectus non nisi pellentesque cursus. Vestibulum at porttitor nunc. Quisque id mauris tortor. Sed imperdiet, lorem quis efficitur feugiat, neque mi blandit augue, eget bibendum libero dolor ac turpis. Fusce sagittis posuere arcu, a suscipit neque fermentum at. Nunc in rhoncus tortor, quis maximus nisi.
 </p>")
 
-StaticPage.create(name: "stream", title: "Jessy's stream", content: "<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at imperdiet nisl. Curabitur aliquam, erat vitae commodo vehicula, tortor velit pretium ante, sit amet scelerisque libero sapien non eros. Vestibulum ullamcorper urna ac eros tincidunt venenatis. Praesent non quam sagittis, bibendum lorem vel, congue tortor. Praesent ex augue, rhoncus posuere ipsum at, commodo rutrum dolor. Proin a ante lacinia neque dictum vestibulum et eget lacus. Curabitur facilisis sit amet ante consectetur euismod. Nam et consequat nibh, nec molestie sem. Nullam at ligula eget tellus pharetra vehicula ac in tortor. Quisque finibus congue eleifend. Fusce volutpat sagittis varius. Nunc lobortis pharetra tortor, vel accumsan libero interdum quis. Etiam luctus tincidunt orci, in tincidunt ex finibus non.
-</p>
-<p>
-Aenean sed mollis ante, et maximus felis. Ut non maximus mauris. Nam quis nunc lectus. Aliquam aliquam imperdiet eros nec suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu ante dapibus, ultricies nisi at, accumsan massa. Nulla mattis luctus mauris, non scelerisque nisl interdum quis.
-</p>
-<p>
-Mauris porta, tortor id tempor hendrerit, odio odio interdum lorem, ac mattis eros odio ultricies eros. Nam vitae faucibus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus ultricies purus id dictum. Morbi eleifend convallis ultrices. Nam nec nibh massa. Sed consectetur leo sed dui congue, vitae tempor dolor gravida. Proin in dapibus ligula. Integer eu ullamcorper magna, id dictum justo. Praesent quis iaculis tortor. Nulla at ligula est. Vivamus venenatis purus eu tincidunt aliquam.
-</p>
-<p>
-Mauris volutpat semper quam elementum eleifend. Sed ut semper erat, vitae maximus mauris. In hac habitasse platea dictumst. Mauris cursus dignissim orci. Nunc quis turpis volutpat magna viverra volutpat. Nam sit amet luctus velit. Integer id finibus risus. Maecenas at neque nunc. Nunc porta turpis odio, eget dapibus ipsum rhoncus in.
-</p>
-<p>
-Morbi consectetur egestas nunc dictum suscipit. Maecenas sit amet mauris gravida felis auctor venenatis non ac quam. Fusce pulvinar enim diam. Ut vel quam eget erat ultrices vestibulum id et quam. Praesent in ultrices ex, ac ullamcorper felis. Sed ultrices lectus non nisi pellentesque cursus. Vestibulum at porttitor nunc. Quisque id mauris tortor. Sed imperdiet, lorem quis efficitur feugiat, neque mi blandit augue, eget bibendum libero dolor ac turpis. Fusce sagittis posuere arcu, a suscipit neque fermentum at. Nunc in rhoncus tortor, quis maximus nisi.
-</p>")
+StaticPage.create(name: "stream", title: "Jessy's stream", content: '<iframe id="player" type="text/html" width="726" height="408"
+  src="http://www.twitch.tv/jessyquil/embed"
+  frameborder="0"></iframe>')
 
-User.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils' , :admin => true
+User.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils' , :admin => true, nickname: "JessyQuil"
 
 AdminUser.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils'
 

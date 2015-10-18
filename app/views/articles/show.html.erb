@@ -17,7 +17,7 @@
 
 		<% @article.blog_comments.reverse_each do |comment| %>
 			<p><%= comment.content %></p>
-			<p><%= comment.user.to_s%></p>
+			<p><%= comment.user.to_s %></p>
 		<% end %>
 	</div>
 	<div class="small-4 columns">
