@@ -26,7 +26,7 @@
       <ul class="left">
         <% if user_signed_in? %>
         <li><%= link_to "Hello #{current_user.nickname}", edit_user_registration_path %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+        <li><%= link_to '<i class="fi-power"></i>'.html_safe, destroy_user_session_path, :method => :delete %></li>
         <%else%>
         <li><%= link_to "Sign in", new_user_session_path %></li>
         <li><%= link_to "Sign up", new_user_registration_path %></li>
@@ -34,7 +34,7 @@
       </ul>
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="<%= 'active' if action_name == 'stream' %> stream"><%= link_to '<i class="fi-play-video stream-icon"></i> Stream'.html_safe, "/stream"%></li>
+        <li class="<%= 'active' if action_name == 'stream' %> stream"><%= link_to '<i class="fi-video stream-icon"></i> Stream'.html_safe, "/stream"%></li>
         <li class="<%= 'active' if controller_name == 'articles' %>"><%= link_to "Blog", articles_path%></li>
         <li class="<%= 'active' if action_name == 'about' %>"><%= link_to "About", "/about"%></li>
       </ul>
