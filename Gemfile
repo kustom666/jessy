@@ -32,8 +32,7 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'truncate_html'
-# Use Unicorn as the app server
-gem 'unicorn'
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
