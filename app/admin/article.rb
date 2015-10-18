@@ -1,6 +1,6 @@
 ActiveAdmin.register Article do
 
-# See permitted parameters documentation:
+# See permitted parameters documentation
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 # permit_params :list, :of, :attributes, :on, :model
@@ -17,7 +17,7 @@ ActiveAdmin.register Article do
 	form do |f|
     f.inputs "Article details" do
       f.input :title
-      f.input :content
+      f.input :content, :input_html => {:class => "tinymce"}
       f.input :user
     end
     f.actions

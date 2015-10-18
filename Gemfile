@@ -35,6 +35,7 @@ gem 'truncate_html'
 gem 'puma'
 gem 'newrelic_rpm'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
