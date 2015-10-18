@@ -46,6 +46,8 @@ Morbi consectetur egestas nunc dictum suscipit. Maecenas sit amet mauris gravida
 
 User.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils' , :admin => true
 
+AdminUser.create! :email => 'jessy@jessyquil.tv', :password => 'jessyquils', :password_confirmation => 'jessyquils'
+
 Article.create! :title => "Lorem ipsum dolor", :content => "<p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at imperdiet nisl. Curabitur aliquam, erat vitae commodo vehicula, tortor velit pretium ante, sit amet scelerisque libero sapien non eros. Vestibulum ullamcorper urna ac eros tincidunt venenatis. Praesent non quam sagittis, bibendum lorem vel, congue tortor. Praesent ex augue, rhoncus posuere ipsum at, commodo rutrum dolor. Proin a ante lacinia neque dictum vestibulum et eget lacus. Curabitur facilisis sit amet ante consectetur euismod. Nam et consequat nibh, nec molestie sem. Nullam at ligula eget tellus pharetra vehicula ac in tortor. Quisque finibus congue eleifend. Fusce volutpat sagittis varius. Nunc lobortis pharetra tortor, vel accumsan libero interdum quis. Etiam luctus tincidunt orci, in tincidunt ex finibus non.
 </p>
@@ -60,4 +62,4 @@ Mauris volutpat semper quam elementum eleifend. Sed ut semper erat, vitae maximu
 </p>
 <p>
 Morbi consectetur egestas nunc dictum suscipit. Maecenas sit amet mauris gravida felis auctor venenatis non ac quam. Fusce pulvinar enim diam. Ut vel quam eget erat ultrices vestibulum id et quam. Praesent in ultrices ex, ac ullamcorper felis. Sed ultrices lectus non nisi pellentesque cursus. Vestibulum at porttitor nunc. Quisque id mauris tortor. Sed imperdiet, lorem quis efficitur feugiat, neque mi blandit augue, eget bibendum libero dolor ac turpis. Fusce sagittis posuere arcu, a suscipit neque fermentum at. Nunc in rhoncus tortor, quis maximus nisi.
-</p>", :user_id => 1 
+</p>", :user_id => 1

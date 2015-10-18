@@ -1,6 +1,6 @@
 module ApplicationHelper
 	  def truncate_and_link( text,options ={})
-	    length = options[:length] || 512
+	    length = options[:length] || 1024
 	    return text if length.blank?
 	    url = options[:url] || '#'
 	    output = raw truncate(text, :length => length)

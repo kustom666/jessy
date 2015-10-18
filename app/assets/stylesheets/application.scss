@@ -14,4 +14,9 @@
  *= require foundation_and_overrides
 
  */
-@import 'foundation_and_overrides.scss'
+@import 'foundation_and_overrides.scss';
+@import 'foundation-icons';
+
+.rec{
+	color: red;
+}

@@ -1,20 +1,32 @@
 <h2><%= @article.title %></h2>
 <p><%= @article.content.html_safe %></p>
 
-<% if user_signed_in? %>
-	<h2>Add a comment:</h2>
-	<%= form_for([@article, @article.blog_comments.build]) do |f| %>
-	  <p>
-	    <%= f.label :content %><br>
-	    <%= f.text_area :content %>
-	  </p>
-	  <p>
-	    <%= f.submit %>
-	  </p>
-	<% end %>
-<% end %>
+<div class="row">
+	<div class="small-8 columns">
+		<% if user_signed_in? %>
+			<h2>Add a comment:</h2>
+			<%= form_for([@article, @article.blog_comments.build]) do |f| %>
+			  <p>
+			    <%= f.text_area :content, placeholder: "Type your comment"%>
+			  </p>
+			  <p>
+			    <%= f.submit "Comment on this article" , :class => "button"%>
+			  </p>
+			<% end %>
+		<% end %>
 
-<% @article.blog_comments.reverse_each do |comment| %>
-	<p><%= comment.content %></p>
-	<p><%= comment.user.to_s%></p>
-<% end %>
+		<% @article.blog_comments.reverse_each do |comment| %>
+			<p><%= comment.content %></p>
+			<p><%= comment.user.to_s%></p>
+		<% end %>
+	</div>
+	<div class="small-4 columns">
+		<h3>Recent articles</h3>
+		<% @suggested.each do |suggestion| %>
+			<div class="row">
+				<h4><%= suggestion.title %></h2>
+				<p><%=  truncate_html(suggestion.content, length: 512, omission: '') %> <%= link_to " Read more", suggestion%></p>
+			</div>
+		<% end %>
+	</div>
+</div>

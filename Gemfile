@@ -29,8 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 gem 'activeadmin', github: 'activeadmin'
-
+gem 'truncate_html'
 # Use Unicorn as the app server
 gem 'unicorn'
 
