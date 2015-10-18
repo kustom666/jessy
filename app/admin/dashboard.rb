@@ -29,12 +29,12 @@ ActiveAdmin.register_page "Dashboard" do
         column do 
             panel "Website response time" do
                 br
-                text_node %{<iframe src="https://rpm.newrelic.com/public/charts/d0N2vYwWZw7" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+                text_node %{<iframe src="https://rpm.newrelic.com/public/charts/jflxWrmRg7i" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
             end
         end
         column do
             panel "Website throughtput" do
-                text_node %{<iframe src="https://rpm.newrelic.com/public/charts/aQyo3FadfqC" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+                text_node %{<iframe src="https://rpm.newrelic.com/public/charts/ha4oif7k4zG" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
             end
         end
     end
