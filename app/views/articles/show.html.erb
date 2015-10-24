@@ -13,6 +13,8 @@
 			    <%= f.submit "Comment on this article" , :class => "button"%>
 			  </p>
 			<% end %>
+		<% else %>
+			
 		<% end %>
 
 		<% @article.blog_comments.reverse_each do |comment| %>
@@ -21,7 +23,7 @@
 		<% end %>
 	</div>
 	<div class="small-4 columns">
-		<h3>Recent articles</h3>
+		<h4 class="block-small-title">Recent articles</h4>
 		<% @suggested.each do |suggestion| %>
 			<div class="row">
 				<h4><%= suggestion.title %></h2>

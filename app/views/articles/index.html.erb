@@ -1,4 +1,4 @@
 <% @articles.each do |article| %>
-<h2><%= article.title %></h2>
-<%=  truncate_html(article.content, length: 1024, omission: '') %> <%= link_to " Read more", article%>
+<h3 class="block-title"><%= article.title %></h3>
+<%=  truncate_html(article.content, length: 1024, omission: '') %> <%= link_to " Read more", article, class: "button" %>
 <% end %>
